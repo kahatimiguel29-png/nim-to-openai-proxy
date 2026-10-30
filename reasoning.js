@@ -442,13 +442,6 @@ function getReasoningPayload(
 
     
 
-
-        chat_template_kwargs: {
-          clear_thinking: true
-        }
-      
-    }
-
     default:
       return {};
   }
