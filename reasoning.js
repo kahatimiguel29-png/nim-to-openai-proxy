@@ -439,8 +439,24 @@ function getReasoningPayload(
         reasoning_effort: enableThinking ? 'high' : 'low'
       };
     }
+case 'mistralai/mistral-large-4-1t-a52b': {
+  if (!enableThinking) {
+    return {};
+  }
 
-    
+  return {
+    reasoning_effort: effort || 'high'
+  };
+}
+case 'z-ai/glm-5.3-flash': {
+  if (effort) {
+    return { reasoning_effort: effort };
+  }
+
+  return {
+    reasoning_effort: enableThinking ? 'max' : 'low'
+  };
+}    
 
     default:
       return {};
