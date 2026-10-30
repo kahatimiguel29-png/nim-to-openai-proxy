@@ -441,30 +441,20 @@ function getReasoningPayload(
     }
 
     case 'mistralai/mistral-large-4-1t-a52b': {
-    
-      
-      
-    
-      
+  if (!enableThinking) {
+    return {};
+  }
 
-      if (!enableThinking) {
-        return {};
-      }
-
-      return {
-        reasoning_effort: effort || 'high'
-      };
+  return {
+    reasoning_effort: effort || 'high'
+  };
     }
 
     case 'z-ai/glm-5.3-flash': {
-      
-      
-      
-      
-
-      return {
-        reasoning_effort:
-          effort || (enableThinking ? 'max' : 'low'),
+  return {
+    reasoning_effort: effort || (enableThinking ? 'max' : 'low')
+  };
+    }
 
         chat_template_kwargs: {
           clear_thinking: true
