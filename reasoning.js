@@ -441,11 +441,11 @@ function getReasoningPayload(
     }
 
     case 'mistralai/mistral-large-4-1t-a52b': {
-      // Mistral Large 4.
-      // NVIDIA's official example uses reasoning_effort: "high".
-      //
-      // No documented hard off-switch is assumed here.
-      // When disabled in the proxy, omit the reasoning parameter.
+    
+      
+      
+    
+      
 
       if (!enableThinking) {
         return {};
@@ -457,11 +457,10 @@ function getReasoningPayload(
     }
 
     case 'z-ai/glm-5.3-flash': {
-      // GLM-5.3-Flash.
-      // Supported reasoning_effort values: low, high, max.
-      //
-      // clear_thinking defaults to false in the NIM chat template.
-      // Set it to true explicitly for chat requests.
+      
+      
+      
+      
 
       return {
         reasoning_effort:
