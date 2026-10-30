@@ -450,12 +450,15 @@ function getReasoningPayload(
   };
     }
 
-    case 'z-ai/glm-5.3-flash': {
-  return {
-    reasoning_effort: effort || (enableThinking ? 'max' : 'low')
-  };
-    }
+case 'z-ai/glm-5.3-flash': {
+  if (effort) {
+    return { reasoning_effort: effort };
+  }
 
+  return {
+    reasoning_effort: enableThinking ? 'max' : 'low'
+  };
+}
         chat_template_kwargs: {
           clear_thinking: true
         }
