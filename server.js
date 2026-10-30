@@ -86,7 +86,7 @@ const MODEL_MAPPING = {
   'google-light': 'google/gemma-4-31b-it',
   'google-lightest': 'meta/muse-glimmer-30b',
   'google-lighter': 'poolside/laguna-xs-2.1',
-  'glm-5.3': 'z-ai/glm-5.3',
+  'mistral-4': 'mistralai/mistral-large-4-1t-a52b',
   'glm-5.3-flash': 'z-ai/glm-5.3-flash',
   // Vision-Modelle — nur Modelle, die erfolgreich auf Chat-Completions antworten.
   // Getestet am: 2026-09-17 — meta/llama-3.2-11b-vision-instruct: HTTP 200 ✓
