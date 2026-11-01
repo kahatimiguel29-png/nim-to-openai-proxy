@@ -454,7 +454,7 @@ case 'z-ai/glm-5.3-flash': {
   }
 
   return {
-    reasoning_effort: enableThinking ? 'max' : 'low'
+    reasoning_effort: enableThinking ? 'high' : 'low'
   };
 }    
 
